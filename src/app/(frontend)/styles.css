@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans KR", sans-serif;
+  --color-ivory: #fffaf0;
+  --color-ivory-muted: #f6efdf;
+  --color-ivory-deep: #e9dfcc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Noto Sans KR", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#notification-panel::backdrop {
+  background: rgb(23 61 48 / 10%);
+  backdrop-filter: blur(1px);
+}
+
+#problem-scanner::backdrop {
+  background: rgb(7 28 21 / 75%);
+  backdrop-filter: blur(3px);
+}
+
+.scanner-progress {
+  appearance: none;
+  border: 0;
+  background: rgb(255 255 255 / 15%);
+}
+
+.scanner-progress::-webkit-progress-bar {
+  border-radius: 999px;
+  background: rgb(255 255 255 / 15%);
+}
+
+.scanner-progress::-webkit-progress-value {
+  border-radius: 999px;
+  background: #58d2a2;
+  transition: width 180ms ease;
+}
+
+.scanner-progress::-moz-progress-bar {
+  border-radius: 999px;
+  background: #58d2a2;
+}
+
+.figma-custom-code-fragment {
+  display: contents;
+}
+
+.figma-bypass-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 2147483647;
+  transform: translateY(-150%);
+  border-radius: 6px;
+  background: #111827;
+  color: #fff;
+  padding: 8px 12px;
+  font: 600 14px/1.2 system-ui, sans-serif;
+  text-decoration: none;
+}
+
+.figma-bypass-link:focus {
+  transform: translateY(0);
+}
